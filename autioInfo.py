@@ -30,7 +30,7 @@ def autoReplat(ToName):
             if re.match("[0-9]+:[0-9]+", str(content)) is None:
                 if content.find("撤回了一条消息") == -1:
                     chat.append(content)
-
+        // 在这里写你要回复的内容
         keyboard.write(chat[-1] + "这是机器人回复（正在测试自动回复机器人")
         keyboard.send('enter')
 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
         print("未找到微信")
         exit()
 
-    wx_app = Application(backend='uia').connect(process=760)
+    wx_app = Application(backend='uia').connect(process=process)
 
     list = ['需要回复的微信名']
     while 1 :
